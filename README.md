@@ -60,4 +60,4 @@ runs:
 * Customize the with section to set input parameters according to your requirements.
 * The caching input parameter is optional and has a default value of true. You can override it as needed.
 * The output used-cache can be accessed in subsequent steps or jobs. In this example, it is set to the value of the 'cache' output from the 'Install dependencies' step.
-* Adjust the workflow and action paths based on your project structure.
+* Adjust the workflow and action paths based on your project structure. 
