@@ -61,3 +61,7 @@ runs:
 * The caching input parameter is optional and has a default value of true. You can override it as needed.
 * The output used-cache can be accessed in subsequent steps or jobs. In this example, it is set to the value of the 'cache' output from the 'Install dependencies' step.
 * Adjust the workflow and action paths based on your project structure. 
+
+
+### 3. Docker Actions
+Docker actions provide a way to encapsulate and execute steps within a Docker container in a GitHub workflow. These actions are especially useful when you want to ensure a consistent and reproducible environment for your tasks.
