@@ -19,7 +19,7 @@ function run() {
 }
 
 run();
-
+```
 
 
 # Get & Cache Dependencies Composite Action
@@ -50,3 +50,4 @@ jobs:
       uses: ./path/to/get-cache-dependencies
       with:
         caching: true
+```
