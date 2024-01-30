@@ -1,13 +1,37 @@
-# Deploy to AWS S3 GitHub Action
+# Custom GitHub Actions
 
-This repository contains a GitHub Action for deploying a static website via AWS S3.
+This repository showcases different types of custom actions that can be used in GitHub Workflows.
+
+## Types of Custom Actions
+
+### 1. JavaScript Actions
+
+The repository includes examples of JavaScript-based GitHub Actions. These actions are written in JavaScript and can be used to perform specific tasks or automation within your workflows.
+
+**Example Code:**
+```javascript
+const core = require('@actions/core')
+const github = require('@actions/github')
+const exec = require('@actions/exec')
+
+function run() {
+  core.notice('Hello from my custom JavaScript Action!')
+}
+
+run();
+
+
+
+# Get & Cache Dependencies Composite Action
+
+This repository contains a GitHub Composite Action named 'Get & Cache Dependencies'. The action is designed to fetch dependencies (via npm) and cache them for improved workflow efficiency.
 
 ## Usage
 
 To use this action in your workflow, add the following step to your `.github/workflows/main.yml` file:
 
 ```yaml
-name: Deploy to AWS S3
+name: Your Workflow Name
 
 on:
   push:
@@ -15,12 +39,14 @@ on:
       - main
 
 jobs:
-  deploy-job:
+  get-cache-deps-job:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Deploy to AWS S3
-      uses: your-username/your-repo-name@v1
+    - name: Get & Cache Dependencies
+      uses: ./path/to/get-cache-dependencies
+      with:
+        caching: true
