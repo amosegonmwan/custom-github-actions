@@ -55,7 +55,7 @@ runs:
       shell: bash
 ```
 
-### Usage Notes:
+#### Usage Notes:
 * In the workflow definition, specify the path to the 'Get & Cache Dependencies' composite action.
 * Customize the with section to set input parameters according to your requirements.
 * The caching input parameter is optional and has a default value of true. You can override it as needed.
